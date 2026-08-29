@@ -1,90 +1,40 @@
 import React from 'react';
-import { FaCheckCircle, FaTooth, FaLaptopCode, FaHandshake } from 'react-icons/fa';
+import Founder from './Founder';
 
-const About = ({ companyData }) => {
+export default function About() {
   return (
-    <section id="about" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-secondary font-semibold uppercase tracking-wider text-sm bg-blue-50 px-3 py-1 rounded-full">
-            About Our Laboratory
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-dark mt-3">
-            Dedicated to Precision in Orthodontics
-          </h2>
-          <p className="text-grayCustom text-lg mt-4">
-            We combine years of dental laboratory expertise with modern digital workflows to serve dental professionals with unmatched quality.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Left Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="bg-background p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
-              <div className="bg-primary text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl mb-4">
-                <FaTooth />
-              </div>
-              <h3 className="text-xl font-bold text-dark mb-2">Expert Craftsmanship</h3>
-              <p className="text-grayCustom text-sm">
-                Every appliance is meticulously crafted to ensure optimal patient comfort and clinical efficiency.
-              </p>
+    <>
+      <section id="about" className="py-16 md:py-24 px-4 md:px-8 max-w-7xl mx-auto bg-white">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="lg:col-span-7">
+            <div className="mb-8">
+              <h2 className="text-[#0C1B2D] text-3xl md:text-4xl font-black mb-4">About Us</h2>
+              <div className="w-16 h-1.5 bg-[#C5912B] rounded-full"></div>
             </div>
-
-            <div className="bg-background p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all sm:translate-y-6">
-              <div className="bg-secondary text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl mb-4">
-                <FaLaptopCode />
-              </div>
-              <h3 className="text-xl font-bold text-dark mb-2">Digital Workflow</h3>
-              <p className="text-grayCustom text-sm">
-                Utilizing state-of-the-art 3D planning and modern thermoforming technology.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Content */}
-          <div className="space-y-6">
-            <h3 className="text-2xl sm:text-3xl font-bold text-primary">
-              {companyData?.name} - Professional {companyData?.type}
-            </h3>
             
-            <p className="text-dark leading-relaxed">
-              {companyData?.about}
-            </p>
-
-            <div className="space-y-3 pt-2">
-              <div className="flex items-center space-x-3 text-dark font-medium">
-                <FaCheckCircle className="text-secondary text-lg shrink-0" />
-                <span>Customized solutions tailored to specific clinical prescriptions.</span>
-              </div>
-              <div className="flex items-center space-x-3 text-dark font-medium">
-                <FaCheckCircle className="text-secondary text-lg shrink-0" />
-                <span>Strict quality control standards on all manufactured appliances.</span>
-              </div>
-              <div className="flex items-center space-x-3 text-dark font-medium">
-                <FaCheckCircle className="text-secondary text-lg shrink-0" />
-                <span>Reliable communication and fast turnaround times for dental practices.</span>
-              </div>
+            <div className="text-slate-600 space-y-5 leading-relaxed font-medium text-sm md:text-base mb-8">
+              <p>
+                <strong className="text-[#0C1B2D]">Ordonto-lab</strong> is a specialized orthodontic laboratory focused on quality, precision, and direct collaboration with dental and orthodontic practices.
+              </p>
+              <p>
+                We believe that short communication lines make a real difference. That is why we work closely and directly with each practice, allowing questions, feedback, and adjustments to be handled quickly and efficiently.
+              </p>
+              <p>
+                By combining orthodontic expertise with modern digital techniques and a personal approach, we aim to be more than just a laboratory. We want to be a reliable and accessible partner for your practice. A key part of this approach is direct and personal communication. By keeping the communication lines short, we can respond quickly, discuss cases directly, and understand the specific needs of each practice. This allows us to build long-term professional relationships based on trust, flexibility, and reliable service.
+              </p>
             </div>
-
-            <div className="pt-4">
-              <a
-                href="#contact"
-                className="inline-flex items-center space-x-2 bg-primary text-white font-medium px-6 py-3 rounded-xl hover:bg-secondary transition-all shadow-md"
-              >
-                <FaHandshake />
-                <span>Partner With Us</span>
-              </a>
-            </div>
-
           </div>
 
+          <Founder />
         </div>
+      </section>
 
+      <div className="relative w-full overflow-hidden leading-none z-20 bg-white">
+        <svg className="relative block w-full h-10 md:h-14" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 C150,80 350,-30 500,60 C650,150 900,20 1200,45 L1200,120 L0,120 Z" className="fill-slate-50" />
+          <path d="M0,0 C150,80 350,-30 500,60 C650,150 900,20 1200,45" fill="none" className="stroke-[#C5912B]" strokeWidth="8" />
+        </svg>
       </div>
-    </section>
+    </>
   );
-};
-
-export default About;
+}
