@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1787480206249",
+    "title": "Removable Appliances",
+    "description": "Custom Orthodontic Solutions  Individually designed removable appliances, manufactured according to the clinical requirements of each case.  Our focus is on precision, functionality and patient-specific design.",
+    "icon": "FaTooth"
+  },
+  {
+    "id": "1787480233795",
+    "title": "Fixed Appliances",
+    "description": "Precision-Made Orthodontic Appliances  High-quality fixed appliances manufactured with attention to detail and consistency.  We work closely with orthodontists to ensure that every appliance matches the intended treatment approach.",
+    "icon": "FaTooth"
+  },
+  {
+    "id": "1787480256764",
+    "title": "Clear Aligners",
+    "description": "Digital Aligner Solutions  Modern digital workflows for clear aligner treatments, combining digital planning, precise production and consistent quality.  From digital case processing to the final appliance, we focus on an efficient and reliable workflow.",
+    "icon": "FaTooth"
+  },
+  {
+    "id": "1787480273937",
+    "title": "Retention",
+    "description": "Designed for Long-Term Stability  Reliable retention solutions designed to support the stability of orthodontic results.  Each appliance is produced with precision and adapted to the individual case.",
+    "icon": "FaTooth"
+  },
+  {
+    "id": "1787480291586",
+    "title": "Digital Orthodontics",
+    "description": "From Digital Data to Precise Results  We integrate digital technology throughout our workflow to improve accuracy, consistency and efficiency.  Digital cases are carefully processed and transformed into precisely manufactured orthodontic solutions.",
+    "icon": "FaTooth"
+  },
+  {
+    "id": "1787480304316",
+    "title": "Custom Solutions",
+    "description": "Expertise for Individual Cases  Every orthodontic case is different.  We provide individually tailored solutions for specific clinical requirements, working directly with orthodontists to find the right technical approach.",
+    "icon": "FaTooth"
+  }
+]
