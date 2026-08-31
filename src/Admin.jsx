@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Dashboard from './Dashboard';
+import Dashboard from './pages/Dashbord';
 
 const Admin = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('ordonto_admin') === 'true');
