@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Over Ons",
+    "services": "Diensten",
+    "why": "Waarom Wij",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Precisie & Kwaliteit in",
+    "highlight": "Orthodontische Oplossingen",
+    "description": "We specialiseren ons in het fabriceren van hoogprecisie orthodontische apparaten voor tandartsen",
+    "btn1": "Ontdek Nu",
+    "btn2": "Onze Diensten"
+  },
+  "features": {
+    "precision": {
+      "title": "Hoge Precisie",
+      "desc": "Internationale standaarden in fabricage en kwaliteit"
+    },
+    "quality": {
+      "title": "Gegarandeerde Kwaliteit",
+      "desc": "Strikte controle in elk productiestadium"
+    }
+  }
+}
