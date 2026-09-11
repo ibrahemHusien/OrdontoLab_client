@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, Globe } from 'lucide-react';
-import logo from '../assets/logo.png';
+
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -24,7 +24,7 @@ export default function Navbar() {
           
           <div className="shrink-0">
             <a href="/" className="flex items-center">
-              <img src={logo} alt="OrdontoLab" className="h-8 w-auto" />
+              <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
               <span className="ml-2 text-xl font-bold text-gray-900">ORDONTOLAB</span>
             </a>
           </div>
