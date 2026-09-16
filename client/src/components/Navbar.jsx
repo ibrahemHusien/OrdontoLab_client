@@ -1,101 +1,75 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Menu, X, Globe } from 'lucide-react';
-
+import React, { useState } from 'react';
+import { Phone, Mail, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
-  const { t, i18n } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-
-  const toggleLanguage = () => {
-    const newLanguage = i18n.language === 'ar' ? 'nl' : 'ar';
-    i18n.changeLanguage(newLanguage);
-    localStorage.setItem('language', newLanguage);
-    document.documentElement.dir = newLanguage === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.lang = newLanguage;
-  };
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          
-          <div className="shrink-0">
-            <a href="/" className="flex items-center">
-              <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
-              <span className="ml-2 text-xl font-bold text-gray-900">ORDONTOLAB</span>
+    <>
+      <div className="bg-slate-100 text-slate-600 border-b border-slate-200 py-2.5 px-6 md:px-12 lg:px-16 text-xs">
+        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-5">
+            <a href="tel:+31643052263" className="flex items-center gap-1.5 hover:text-[#C5912B] transition-colors font-medium">
+              <Phone size={13} className="text-[#C5912B]" /> +31 6 43052263
+            </a>
+            <a href="mailto:info@ordontolab.nl" className="flex items-center gap-1.5 hover:text-[#C5912B] transition-colors font-medium">
+              <Mail size={13} className="text-[#C5912B]" /> info@ordontolab.nl
             </a>
           </div>
-
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-[#C5912B] transition">
-              {t('nav.home')}
-            </a>
-            <a href="#services" className="text-gray-700 hover:text-[#C5912B] transition">
-              {t('nav.services')}
-            </a>
-            <a href="#features" className="text-gray-700 hover:text-[#C5912B] transition">
-              {t('nav.about')}
-            </a>
-            <a href="#contact" className="text-gray-700 hover:text-[#C5912B] transition">
-              {t('nav.contact')}
-            </a>
-
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-2 bg-[#C5912B] text-white px-4 py-2 rounded-lg hover:bg-[#B07A1F] transition font-medium"
-              title={i18n.language === 'ar' ? 'Switch to Dutch' : 'تبديل للعربية'}
-            >
-              <Globe size={18} />
-              <span>{i18n.language === 'ar' ? 'NL' : 'AR'}</span>
-            </button>
-
-            <button className="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition font-medium">
-              {t('nav.contact_us')}
-            </button>
-          </div>
-
-          <div className="md:hidden flex items-center gap-3">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1 bg-[#C5912B] text-white px-3 py-2 rounded-lg hover:bg-[#B07A1F] transition"
-              title={i18n.language === 'ar' ? 'Switch to Dutch' : 'تبديل للعربية'}
-            >
-              <Globe size={16} />
-              <span className="text-sm">{i18n.language === 'ar' ? 'NL' : 'AR'}</span>
-            </button>
-
-            <button
-              onClick={toggleMenu}
-              className="text-gray-900 hover:text-[#C5912B] transition"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+          <div className="flex items-center gap-3 font-bold tracking-widest text-[11px] uppercase text-[#0C1B2D]">
+            <span>PRECISION</span>
+            <span className="text-[#C5912B]">|</span>
+            <span>QUALITY</span>
+            <span className="text-[#C5912B]">|</span>
+            <span>CARE</span>
           </div>
         </div>
+      </div>
 
-        {isOpen && (
-          <div className="md:hidden bg-gray-50 py-4 space-y-3">
-            <a href="#home" className="block text-gray-700 hover:text-[#C5912B] px-4 py-2">
-              {t('nav.home')}
+      <header className="bg-white text-[#0C1B2D] sticky top-0 z-40 shadow-sm border-b border-slate-100">
+        <div className="w-full px-6 md:px-12 lg:px-16 py-3 flex justify-between items-center">
+          <a href="#home" className="flex items-center gap-4 group">
+            <div className="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center overflow-hidden py-1">
+              <img src="/logo.jpg" alt="Ordonto-Lab Logo" className="w-full h-full object-contain group-hover:scale-105 transition-transform" />
+            </div>
+            <div>
+              <div className="text-xl font-black tracking-wider text-[#0C1B2D] leading-none">ORDONTO-LAB</div>
+              <div className="text-[#C5912B] text-[11px] font-bold tracking-widest normal-case mt-1.5">Orthodontic Laboratory</div>
+            </div>
+          </a>
+
+          <nav className="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-600">
+            <a href="#home" className="hover:text-[#C5912B] transition-colors">Home</a>
+            <a href="#about" className="hover:text-[#C5912B] transition-colors">About Us</a>
+            <a href="#services" className="hover:text-[#C5912B] transition-colors">Services</a>
+            <a href="#why-us" className="hover:text-[#C5912B] transition-colors">Why Us</a>
+          </nav>
+
+          <div className="hidden md:flex items-center">
+            <a href="#contact" className="bg-[#0C1B2D] text-white font-bold px-6 py-2.5 rounded-lg hover:bg-[#C5912B] hover:text-[#0C1B2D] transition-colors text-sm shadow-md">
+              Contact Us
             </a>
-            <a href="#services" className="block text-gray-700 hover:text-[#C5912B] px-4 py-2">
-              {t('nav.services')}
-            </a>
-            <a href="#features" className="block text-gray-700 hover:text-[#C5912B] px-4 py-2">
-              {t('nav.about')}
-            </a>
-            <a href="#contact" className="block text-gray-700 hover:text-[#C5912B] px-4 py-2">
-              {t('nav.contact')}
-            </a>
-            <button className="w-full bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition font-medium">
-              {t('nav.contact_us')}
-            </button>
+          </div>
+
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
+            className="md:hidden p-2 text-slate-700 hover:text-[#C5912B] transition-colors"
+            aria-label="Toggle Menu"
+          >
+            {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
+
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-4 shadow-lg animate-fade-in">
+            <a href="#home" onClick={() => setIsMobileMenuOpen(false)} className="block text-slate-700 font-semibold hover:text-[#C5912B] py-1 border-b border-slate-100">Home</a>
+            <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="block text-slate-700 font-semibold hover:text-[#C5912B] py-1 border-b border-slate-100">About Us</a>
+            <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="block text-slate-700 font-semibold hover:text-[#C5912B] py-1 border-b border-slate-100">Services</a>
+            <a href="#why-us" onClick={() => setIsMobileMenuOpen(false)} className="block text-slate-700 font-semibold hover:text-[#C5912B] py-1 border-b border-slate-100">Why Us</a>
+            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="block bg-[#0C1B2D] text-white text-center font-bold py-3 rounded-lg hover:bg-[#C5912B] transition-colors text-sm">Contact Us</a>
           </div>
         )}
-      </div>
-    </nav>
+      </header>
+    </>
   );
 }

@@ -1,43 +1,30 @@
-import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import './i18n/config';
+import React from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
 import Footer from './components/Footer';
+import Home from './pages/Home';
 
 export default function App() {
-  const { i18n } = useTranslation();
-
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('language') || 'ar';
-    
-    i18n.changeLanguage(savedLanguage);
-    
-    document.documentElement.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.lang = savedLanguage;
-  }, [i18n]);
-
-  useEffect(() => {
-    const handleLanguageChange = (lng) => {
-      document.documentElement.dir = lng === 'ar' ? 'rtl' : 'ltr';
-      document.documentElement.lang = lng;
-    };
-
-    i18n.on('languageChanged', handleLanguageChange);
-
-    return () => {
-      i18n.off('languageChanged', handleLanguageChange);
-    };
-  }, [i18n]);
-
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-[#C5912B] selection:text-white relative scroll-smooth">
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes scaleUp {
+          from { opacity: 0; transform: scale(0.92); }
+          to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-in {
+          animation: fadeIn 0.3s ease-out forwards;
+        }
+        .animate-scale-up {
+          animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+      `}</style>
+
       <Navbar />
-      <main>
-        <Hero />
-        <Services />
-      </main>
+      <Home />
       <Footer />
     </div>
   );
