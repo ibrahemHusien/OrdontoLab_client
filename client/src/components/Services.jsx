@@ -138,7 +138,7 @@ export default function Services({ services, isLoading }) {
             >
               <X size={20} />
             </button>
-            <div className="w-16 h-16 flex items-center justify-center overflow-hidden mb-6">
+            <div className="w-36 h-36 flex items-center justify-center overflow-hidden mb-6 -ml-8">
               <img src="/logo.jpg" alt="Logo" className="w-full h-full object-contain" />
             </div>
             <h3 className="text-2xl font-black text-[#0C1B2D] mb-4">

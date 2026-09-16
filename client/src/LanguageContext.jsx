@@ -148,10 +148,10 @@ const translations = {
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState('nl');
 
   useEffect(() => {
-    const savedLang = localStorage.getItem('language') || 'en';
+    const savedLang = localStorage.getItem('language') || 'nl';
     setLang(savedLang);
     document.documentElement.lang = savedLang;
   }, []);

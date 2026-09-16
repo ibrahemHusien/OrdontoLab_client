@@ -33,10 +33,8 @@ export default function About() {
           </p>
         </div>
 
-        {/* Right Side: Founder Card */}
         <div className="lg:col-span-5 relative rounded-3xl overflow-hidden bg-[#0C1B2D] text-white p-8 md:p-10 shadow-2xl flex flex-col justify-end min-h-[540px] group cursor-pointer border border-slate-800">
           
-          {/* Background Image Container */}
           <div className="absolute inset-0 overflow-hidden">
             <img 
               src="/founder.jpg" 
@@ -44,11 +42,9 @@ export default function About() {
               className="w-full h-[70%] object-cover object-top opacity-90 transition-transform duration-500 ease-out group-hover:scale-105"
               onError={(e) => { e.target.style.display = 'none'; }}
             />
-            {/* Gradient starts lower down so the head/face remains clean & clear */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#0C1B2D] via-[#0C1B2D]/85 via-50% to-transparent" />
           </div>
 
-          {/* Card Content */}
           <div className="relative z-10 space-y-4 pt-44">
             <h3 className="text-2xl md:text-3xl font-bold leading-tight">
               {titlePrefix} <br />
@@ -59,7 +55,6 @@ export default function About() {
               {t.about.founderDesc}
             </p>
 
-            {/* Bottom Contact Pills */}
             <div className="space-y-2.5 pt-2">
               <div className="flex items-center gap-3 p-3 bg-[#08121E]/90 backdrop-blur-md rounded-2xl border border-white/10 shadow-sm">
                 <Mail className="text-[#C5912B] shrink-0" size={18} />

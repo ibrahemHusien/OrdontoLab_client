@@ -41,19 +41,19 @@ export default function Navbar() {
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-3">
+      <div className="max-w-7xl mx-auto px-2 md:px-4 h-24 flex items-center justify-between">
+        <a href="#home" className="flex items-center gap-4 -ml-2">
           <img 
             src="/logo.jpg" 
             alt="OrdontoLab Logo" 
-            className="h-10 w-auto object-contain"
+            className="h-16 md:h-20 w-auto object-contain"
             onError={(e) => { e.target.src = '/logo.png'; }}
           />
           <div className="flex flex-col">
-            <span className="font-black text-xl tracking-tight text-[#0C1B2D]">
+            <span className="font-black text-2xl tracking-tight text-[#0C1B2D]">
               Ordonto-Lab
             </span>
-            <span className="text-[10px] tracking-widest text-[#C5912B] font-bold uppercase -mt-1">
+            <span className="text-xs tracking-widest text-[#C5912B] font-bold uppercase -mt-0.5">
               Orthodontic Laboratory
             </span>
           </div>
