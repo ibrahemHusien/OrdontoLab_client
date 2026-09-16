@@ -148,13 +148,18 @@ const translations = {
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState('nl');
+  const [lang, setLang] = useState(() => {
+    return localStorage.getItem('language') || 'nl';
+  });
 
   useEffect(() => {
-    const savedLang = localStorage.getItem('language') || 'nl';
-    setLang(savedLang);
-    document.documentElement.lang = savedLang;
-  }, []);
+    const savedLang = localStorage.getItem('language');
+    if (!savedLang) {
+      localStorage.setItem('language', 'nl');
+      setLang('nl');
+    }
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   const toggleLanguage = () => {
     const nextLang = lang === 'en' ? 'nl' : 'en';
