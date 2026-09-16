@@ -1,13 +1,18 @@
 import React from 'react';
 import { Target, MessageSquare, Crosshair, Cpu, Handshake, ChevronRight } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
 export default function WhyChooseUs() {
+  const { t } = useLanguage();
+
   return (
     <>
       <section id="why-us" className="py-16 md:py-24 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-[#0C1B2D] text-3xl md:text-4xl font-black mb-4">WHY ORDONTO-LAB?</h2>
+            <h2 className="text-[#0C1B2D] text-3xl md:text-4xl font-black mb-4">
+              {t.whyUs?.title || "WHY ORDONTO-LAB?"}
+            </h2>
             <div className="bg-[#C5912B] w-16 h-1.5 mx-auto rounded-full"></div>
           </div>
 
@@ -17,9 +22,11 @@ export default function WhyChooseUs() {
                 <Target size={28} />
               </div>
               <div>
-                <h3 className="text-[#0C1B2D] font-bold text-lg mb-2">Orthodontic Focus</h3>
+                <h3 className="text-[#0C1B2D] font-bold text-lg mb-2">
+                  {t.whyUs?.card1Title || "Orthodontic Focus"}
+                </h3>
                 <p className="text-slate-600 text-xs md:text-sm leading-relaxed font-medium">
-                  Our work is dedicated exclusively to orthodontics.
+                  {t.whyUs?.card1Desc || "Our work is dedicated exclusively to orthodontics."}
                 </p>
               </div>
             </div>
@@ -29,9 +36,11 @@ export default function WhyChooseUs() {
                 <MessageSquare size={28} />
               </div>
               <div>
-                <h3 className="text-[#0C1B2D] font-bold text-lg mb-2">Direct Communication</h3>
+                <h3 className="text-[#0C1B2D] font-bold text-lg mb-2">
+                  {t.whyUs?.card2Title || "Direct Communication"}
+                </h3>
                 <p className="text-slate-600 text-xs md:text-sm leading-relaxed font-medium">
-                  Direct communication with the laboratory specialist — without unnecessary layers.
+                  {t.whyUs?.card2Desc || "Direct communication with the laboratory specialist — without unnecessary layers."}
                 </p>
               </div>
             </div>
@@ -41,9 +50,11 @@ export default function WhyChooseUs() {
                 <Crosshair size={28} />
               </div>
               <div>
-                <h3 className="text-[#0C1B2D] font-bold text-lg mb-2">Precision</h3>
+                <h3 className="text-[#0C1B2D] font-bold text-lg mb-2">
+                  {t.whyUs?.card3Title || "Precision"}
+                </h3>
                 <p className="text-slate-600 text-xs md:text-sm leading-relaxed font-medium">
-                  Every case is handled with attention to detail and a strong focus on consistent quality.
+                  {t.whyUs?.card3Desc || "Every case is handled with attention to detail and a strong focus on consistent quality."}
                 </p>
               </div>
             </div>
@@ -53,9 +64,11 @@ export default function WhyChooseUs() {
                 <Cpu size={28} />
               </div>
               <div>
-                <h3 className="text-[#0C1B2D] font-bold text-lg mb-2">Digital Workflow</h3>
+                <h3 className="text-[#0C1B2D] font-bold text-lg mb-2">
+                  {t.whyUs?.card4Title || "Digital Workflow"}
+                </h3>
                 <p className="text-slate-600 text-xs md:text-sm leading-relaxed font-medium">
-                  Modern digital processes connect clinical information with precise laboratory production.
+                  {t.whyUs?.card4Desc || "Modern digital processes connect clinical information with precise laboratory production."}
                 </p>
               </div>
             </div>
@@ -65,9 +78,11 @@ export default function WhyChooseUs() {
                 <Handshake size={28} />
               </div>
               <div>
-                <h3 className="text-[#0C1B2D] font-bold text-lg mb-2">Personal Partnership</h3>
+                <h3 className="text-[#0C1B2D] font-bold text-lg mb-2">
+                  {t.whyUs?.card5Title || "Personal Partnership"}
+                </h3>
                 <p className="text-slate-600 text-xs md:text-sm leading-relaxed font-medium">
-                  We build long-term relationships with orthodontic practices based on reliability and trust.
+                  {t.whyUs?.card5Desc || "We build long-term relationships with orthodontic practices based on reliability and trust."}
                 </p>
               </div>
             </div>
@@ -81,10 +96,10 @@ export default function WhyChooseUs() {
           
           <div className="max-w-2xl text-center md:text-left relative z-10">
             <h2 className="text-2xl md:text-4xl font-black tracking-wider uppercase mb-3">
-              YOUR CASE. <span className="text-[#C5912B]">OUR EXPERTISE.</span>
+              {t.whyUs?.ctaTitle1 || "YOUR CASE."} <span className="text-[#C5912B]">{t.whyUs?.ctaTitle2 || "OUR EXPERTISE."}</span>
             </h2>
             <p className="text-slate-300 text-base md:text-lg font-medium leading-relaxed">
-              A specialized orthodontic laboratory, working directly with orthodontic professionals.
+              {t.whyUs?.ctaDesc || "A specialized orthodontic laboratory, working directly with orthodontic professionals."}
             </p>
           </div>
 
@@ -93,7 +108,7 @@ export default function WhyChooseUs() {
               href="#contact" 
               className="bg-[#C5912B] text-white font-bold px-8 py-4 rounded-xl hover:bg-[#b07e1e] transition-all flex items-center justify-center gap-2 shadow-lg transform hover:-translate-y-0.5 text-base w-full md:w-auto"
             >
-              Get in Touch <ChevronRight size={20} />
+              {t.whyUs?.ctaBtn || "Get in Touch"} <ChevronRight size={20} />
             </a>
           </div>
         </div>
