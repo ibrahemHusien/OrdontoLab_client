@@ -3,11 +3,12 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 const translations = {
   en: {
     tagline: 'PRECISION | QUALITY | CARE',
+    location: 'Our Location',
     nav: {
       home: 'Home',
       about: 'About Us',
       services: 'Services',
-      whyUs: 'Why Us',
+      whyUs: 'Our Difference',
       contactUs: 'Contact Us',
     },
     hero: {
@@ -41,7 +42,7 @@ const translations = {
       defaultDesc: 'High-precision orthodontic solutions tailored for dental specialists.',
     },
     whyUs: {
-      title: 'WHY ORDONTO-LAB?',
+      title: 'Our Difference',
       card1Title: 'Orthodontic Focus',
       card1Desc: 'Our work is dedicated exclusively to orthodontics.',
       card2Title: 'Direct Communication',
@@ -74,11 +75,12 @@ const translations = {
   },
   nl: {
     tagline: 'PRECISIE | KWALITEIT | ZORG',
+    location: 'Onze Locatie',
     nav: {
       home: 'Home',
       about: 'Over Ons',
-      services: 'Diensten',
-      whyUs: 'Waarom Wij',
+      services: 'Services',
+      whyUs: 'Ons Verschil',
       contactUs: 'Neem Contact Op',
     },
     hero: {
@@ -86,7 +88,7 @@ const translations = {
       titleLine2: 'Orthodontische Oplossingen',
       description: 'Wij zijn gespecialiseerd in het vervaardigen van hoogwaardige orthodontische apparatuur op maat voor tandheelkundig specialisten, waarbij geavanceerd vakmanschap wordt gecombineerd met biologische zorg.',
       btnContact: 'Neem Contact Op',
-      btnServices: 'Onze Diensten',
+      btnServices: 'Onze Services',
       card1Title: 'Precisie Vakmanschap',
       card1Desc: 'Sur-mesure orthodontische apparatuur gemaakt met uiterste nauwkeurigheid en aandacht voor biomechanische details.',
       card2Title: 'Kwaliteitsgarantie',
@@ -105,14 +107,14 @@ const translations = {
       viewProfile: 'Bekijk Profiel',
     },
     services: {
-      title: 'Onze Diensten',
+      title: 'Onze Services',
       readMore: 'Lees Meer',
       close: 'Sluiten',
       closeModal: 'Modal Sluiten',
       defaultDesc: 'Hoogwaardige orthodontische oplossingen op maat voor tandheelkundig specialisten.',
     },
     whyUs: {
-      title: 'WAAROM ORDONTO-LAB?',
+      title: 'Ons Verschil',
       card1Title: 'Orthodontische Focus',
       card1Desc: 'Ons werk is uitsluitend gewijd aan orthodontie.',
       card2Title: 'Directe Communicatie',

@@ -10,39 +10,45 @@ export default function Navbar() {
 
   return (
     <header className="w-full bg-white sticky top-0 z-50 shadow-sm border-b border-slate-100">
-      {/* Top Info Bar */}
-      <div className="bg-slate-50 border-b border-slate-100 py-2 px-4 md:px-8 text-xs text-slate-600">
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-          <div className="flex flex-wrap items-center gap-4 md:gap-6">
-            <a href="tel:+31643052263" className="flex items-center gap-1.5 hover:text-[#C5912B] transition-colors">
+      <div className="bg-[#0C1B2D] py-2.5 text-xs text-slate-200">
+        <div className="max-w-7xl mx-auto w-full px-4 md:px-8 flex flex-wrap justify-between items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2.5">
+            <a 
+              href="tel:+31643052263" 
+              className="flex items-center gap-2 bg-white/10 backdrop-blur-xs px-3 py-1.5 rounded-full border border-white/15 text-white hover:bg-white hover:text-[#0C1B2D] transition-all"
+            >
               <Phone size={13} className="text-[#C5912B]" />
-              <span>+31 6 43052263</span>
+              <span className="font-medium">+31 6 43052263</span>
             </a>
-            <a href="mailto:info@ordontolab.nl" className="flex items-center gap-1.5 hover:text-[#C5912B] transition-colors">
+
+            <a 
+              href="mailto:info@ordontolab.nl" 
+              className="flex items-center gap-2 bg-white/10 backdrop-blur-xs px-3 py-1.5 rounded-full border border-white/15 text-white hover:bg-white hover:text-[#0C1B2D] transition-all"
+            >
               <Mail size={13} className="text-[#C5912B]" />
-              <span>info@ordontolab.nl</span>
+              <span className="font-medium">info@ordontolab.nl</span>
             </a>
+
             <a 
               href={googleMapsUrl}
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center gap-1.5 hover:text-[#C5912B] transition-colors"
+              className="flex items-center gap-2 bg-white/10 backdrop-blur-xs px-3 py-1.5 rounded-full border border-white/15 text-white hover:bg-white hover:text-[#0C1B2D] transition-all"
               title="Vlijtweg 1, 8191 JR Wapenveld"
             >
               <MapPin size={13} className="text-[#C5912B]" />
-              <span>{t.nav?.location || 'Our Location'}</span>
+              <span className="font-medium">{t.location}</span>
             </a>
           </div>
 
-          <div className="hidden lg:block text-slate-400 tracking-wider text-[11px] uppercase font-bold">
+          <div className="hidden lg:block text-[#C5912B] tracking-wider text-[11px] uppercase font-bold">
             {t.tagline}
           </div>
         </div>
       </div>
 
-      {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-2 md:px-4 h-24 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-4 -ml-2">
+      <div className="max-w-7xl mx-auto w-full px-4 md:px-8 h-24 flex items-center justify-between">
+        <a href="#home" className="flex items-center gap-0 -ml-2">
           <img 
             src="/logo.jpg" 
             alt="OrdontoLab Logo" 
@@ -102,7 +108,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-slate-100 py-4 px-6 space-y-4 shadow-lg">
           <a href="#home" onClick={() => setIsOpen(false)} className="block text-slate-700 font-medium hover:text-[#C5912B]">{t.nav.home}</a>
