@@ -18,3 +18,10 @@ export const deleteService = (id) => API.delete(`/services/${id}`);
 export const getContact = () => API.get('/contact');
 export const updateContact = (data) => API.put('/contact', data);
 
+export const trackVisit = async () => {
+  try {
+    await API.post('/company/visit');
+  } catch (error) {
+    console.error('Error tracking visit:', error);
+  }
+};

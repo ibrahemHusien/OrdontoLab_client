@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { getCompany, updateCompany, getFounder, updateFounder, getServices, createService, updateService, deleteService, getContact, updateContact } from '../services/api';
-import { FaArrowLeft, FaSave, FaPlus, FaTrash, FaEdit, FaSignOutAlt } from 'react-icons/fa';
+import { FaArrowLeft, FaSave, FaPlus, FaTrash, FaEdit, FaSignOutAlt, FaEye } from 'react-icons/fa';
 
 const Dashboard = ({ onLogout }) => {
-  const [company, setCompany] = useState({ name: '', type: '', website: '', about: '' });
+  const [company, setCompany] = useState({ name: '', type: '', website: '', about: '', visits: 0 });
   const [founder, setFounder] = useState({ name: '', position: '', bio: '' });
   const [contact, setContact] = useState({ phone: '', address: '', website: '', emails: [] });
   const [services, setServices] = useState([]);
@@ -141,6 +141,16 @@ const Dashboard = ({ onLogout }) => {
         )}
 
         <div className="space-y-8">
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-between">
+            <div>
+              <p className="text-sm font-semibold text-grayCustom">Total Website Visits</p>
+              <h3 className="text-3xl font-extrabold text-primary mt-1">{company.visits || 0}</h3>
+            </div>
+            <div className="bg-blue-50 text-primary p-4 rounded-2xl">
+              <FaEye size={28} />
+            </div>
+          </div>
+
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
             <h2 className="text-xl font-bold text-dark mb-4 pb-2 border-b">Edit Company Details</h2>
             <form onSubmit={handleCompanySubmit} className="space-y-4">

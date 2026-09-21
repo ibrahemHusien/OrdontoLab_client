@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { LanguageProvider } from './LanguageContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import { trackVisit } from './services/api';
 
 export default function App() {
+  useEffect(() => {
+    const hasVisited = sessionStorage.getItem('visited');
+    if (!hasVisited) {
+      trackVisit()
+        .then(() => {
+          sessionStorage.setItem('visited', 'true');
+        })
+        .catch(() => {});
+    }
+  }, []);
+
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-[#C5912B] selection:text-white relative scroll-smooth">
