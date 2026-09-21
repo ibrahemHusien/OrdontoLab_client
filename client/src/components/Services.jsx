@@ -6,7 +6,7 @@ const serviceTranslations = {
   nl: {
     "removable appliances": {
       title: "Uitneembare Apparatuur",
-      desc: "Orthodontische oplossingen op maat. Individueel ontworpen uitneembare apparatuur, vervaardigd volgens de klinische vereisten van elke casus."
+      desc: "Orthodontische oplossingen op maat gemaakt. Individueel ontworpen uitneembare apparatuur, vervaardigd volgens de klinische vereisten van elke casus."
     },
     "fixed appliances": {
       title: "Vaste Apparatuur",
@@ -14,18 +14,18 @@ const serviceTranslations = {
     },
     "clear aligners": {
       title: "Onzichtbare Beugels (Aligners)",
-      desc: "Digitale aligner-oplossingen. Moderne digitale workflows voor behandelingen met onzichtbare beugels, gecombineerd met accurate planning."
+      desc: "Digitale aligner-oplossingen. Moderne digitale workflow voor behandelingen met onzichtbare beugels, gecombineerd met accurate planning."
     },
     "retention": {
       title: "Retentie Apparatuur",
-      desc: "Ontworpen voor langetermijnstabiliteit. Betrouwbare retentie-oplossingen om de stabiliteit van orthodontische resultaten te ondersteunen."
+      desc: "Ontworpen voor langetermijnstabiliteit. Betrouwbare retentie-oplossingen om de stabiliteit van orthodontische resultaten te waarborgen."
     },
     "digital orthodontics": {
       title: "Digitale Orthodontie",
       desc: "Van digitale data naar accurate resultaten. Wij integreren digitale technologie in onze workflow om de nauwkeurigheid en efficiëntie te verhogen."
     },
     "custom solutions": {
-      title: "Oplossingen op Maat",
+      title: "Oplossingen op Maat Gemaakt",
       desc: "Expertise voor individuele casussen. Elke orthodontische casus is uniek. Wij bieden oplossingen op maat voor specifieke klinische behoeften."
     }
   }
