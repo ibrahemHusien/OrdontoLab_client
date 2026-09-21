@@ -18,5 +18,3 @@ export const deleteService = (id) => API.delete(`/services/${id}`);
 export const getContact = () => API.get('/contact');
 export const updateContact = (data) => API.put('/contact', data);
 
-export const trackVisit = () => API.post('/track-visit');
-export const getAdminStats = () => API.get('/admin/stats');

@@ -7,7 +7,7 @@ const companyRoutes = require('./routes/companyRoutes');
 const founderRoutes = require('./routes/founderRoutes');
 const servicesRoutes = require('./routes/servicesRoutes');
 const contactRoutes = require('./routes/contactRoutes');
-const statsRoutes = require('./routes/statsRoutes');
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -23,7 +23,7 @@ app.use('/api/company', companyRoutes);
 app.use('/api/founder', founderRoutes);
 app.use('/api/services', servicesRoutes);
 app.use('/api/contact', contactRoutes);
-app.use('/api', statsRoutes);
+
 
 app.get('/', (req, res) => {
   res.status(200).json({ status: 'Ordonto Lab API is running successfully' });
