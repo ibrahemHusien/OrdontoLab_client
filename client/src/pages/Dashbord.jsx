@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { getCompany, updateCompany, getFounder, updateFounder, getServices, createService, updateService, deleteService, getContact, updateContact } from '../services/api';
-import { FaArrowLeft, FaSave, FaPlus, FaTrash, FaEdit, FaSignOutAlt } from 'react-icons/fa';
+import { getCompany, updateCompany, getFounder, updateFounder, getServices, createService, updateService, deleteService, getContact, updateContact, getAdminStats } from '../services/api';
+import { FaArrowLeft, FaSave, FaPlus, FaTrash, FaEdit, FaSignOutAlt, FaEye } from 'react-icons/fa';
 
 const Dashboard = ({ onLogout }) => {
   const [company, setCompany] = useState({ name: '', type: '', website: '', about: '' });
   const [founder, setFounder] = useState({ name: '', position: '', bio: '' });
   const [contact, setContact] = useState({ phone: '', address: '', website: '', emails: [] });
   const [services, setServices] = useState([]);
+  const [totalVisits, setTotalVisits] = useState(0);
   
   const [newService, setNewService] = useState({ title: '', description: '', icon: 'FaTooth' });
   const [editingServiceId, setEditingServiceId] = useState(null);
@@ -33,6 +34,9 @@ const Dashboard = ({ onLogout }) => {
 
       const servRes = await getServices();
       if (servRes?.data) setServices(servRes.data);
+
+      const statsRes = await getAdminStats();
+      if (statsRes?.data?.totalVisits !== undefined) setTotalVisits(statsRes.data.totalVisits);
     } catch (error) {
       console.error(error);
     } finally {
@@ -139,6 +143,18 @@ const Dashboard = ({ onLogout }) => {
             {message}
           </div>
         )}
+
+        <div className="mb-8 bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <div className="bg-primary/10 p-3 rounded-xl text-primary">
+              <FaEye size={24} />
+            </div>
+            <div>
+              <span className="text-sm font-semibold text-grayCustom">Total Website Visits</span>
+              <h3 className="text-3xl font-black text-primary mt-0.5">{totalVisits}</h3>
+            </div>
+          </div>
+        </div>
 
         <div className="space-y-8">
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
