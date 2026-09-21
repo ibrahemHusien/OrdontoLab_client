@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 
-const VisitSchema = new mongoose.Schema({
-  totalVisits: { type: Number, default: 0 }
-});
+const visitSchema = new mongoose.Schema({
+  totalVisits: {
+    type: Number,
+    default: 0
+  }
+}, { timestamps: true });
 
-module.exports = mongoose.model('Visit', VisitSchema);
+module.exports = mongoose.model('Visit', visitSchema);
