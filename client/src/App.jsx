@@ -3,19 +3,10 @@ import { LanguageProvider } from './LanguageContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import { trackVisit } from './services/api';
+
 
 export default function App() {
-  useEffect(() => {
-    const hasVisited = sessionStorage.getItem('visited');
-    if (!hasVisited) {
-      trackVisit()
-        .then(() => {
-          sessionStorage.setItem('visited', 'true');
-        })
-        .catch(() => {});
-    }
-  }, []);
+
 
   return (
     <LanguageProvider>
