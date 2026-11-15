@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { lang, toggleLanguage, t } = useLanguage();
 
-  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Vlijtweg+1,+8191+JR+Wapenveld";
+  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Vlijtweg+1H,+8191+JR+Wapenveld";
 
   return (
     <header className="w-full bg-white sticky top-0 z-50 shadow-sm border-b border-slate-100">
@@ -34,7 +34,7 @@ export default function Navbar() {
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center gap-2 bg-white/10 backdrop-blur-xs px-3 py-1.5 rounded-full border border-white/15 text-white hover:bg-white hover:text-[#0C1B2D] transition-all"
-              title="Vlijtweg 1, 8191 JR Wapenveld"
+              title="Vlijtweg 1H, 8191 JR Wapenveld"
             >
               <MapPin size={13} className="text-[#C5912B]" />
               <span className="font-medium">{t.location}</span>

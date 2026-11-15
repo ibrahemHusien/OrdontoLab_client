@@ -13,7 +13,7 @@ exports.getServices = async (req, res) => {
   }
 };
 
-// Create a new service
+
 exports.createService = async (req, res) => {
   try {
     const fileData = await fs.readFile(filePath, 'utf8');
@@ -34,7 +34,7 @@ exports.createService = async (req, res) => {
   }
 };
 
-// Update an existing service
+
 exports.updateService = async (req, res) => {
   try {
     const { id } = req.params;
@@ -59,7 +59,7 @@ exports.updateService = async (req, res) => {
   }
 };
 
-// Delete a service
+
 exports.deleteService = async (req, res) => {
   try {
     const { id } = req.params;

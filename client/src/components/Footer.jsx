@@ -4,7 +4,7 @@ import { useLanguage } from '../LanguageContext';
 
 export default function Footer() {
   const { t } = useLanguage();
-  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Vlijtweg+1,+8191+JR+Wapenveld";
+  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Vlijtweg+1H,+8191+JR+Wapenveld";
 
   return (
     <footer className="bg-[#0C1B2D] text-white pt-16 pb-8 border-t border-slate-800">
@@ -66,7 +66,7 @@ export default function Footer() {
                 className="flex items-center gap-2.5 hover:text-[#C5912B] transition-colors"
               >
                 <MapPin size={15} className="text-[#C5912B] shrink-0" />
-                <span>Vlijtweg 1, 8191 JR Wapenveld</span>
+                <span>Vlijtweg 1H, 8191 JR Wapenveld</span>
               </a>
             </div>
           </div>

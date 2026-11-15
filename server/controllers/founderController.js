@@ -3,7 +3,7 @@ const path = require('path');
 
 const filePath = path.join(__dirname, '../data/founder.json');
 
-// Get founder details
+
 exports.getFounder = async (req, res) => {
   try {
     const data = await fs.readFile(filePath, 'utf8');
@@ -13,7 +13,7 @@ exports.getFounder = async (req, res) => {
   }
 };
 
-// Update founder details
+
 exports.updateFounder = async (req, res) => {
   try {
     const newData = req.body;

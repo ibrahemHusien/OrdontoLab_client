@@ -3,7 +3,7 @@ const path = require('path');
 
 const filePath = path.join(__dirname, '../data/contact.json');
 
-// Get contact details
+
 exports.getContact = async (req, res) => {
   try {
     const data = await fs.readFile(filePath, 'utf8');
@@ -13,7 +13,6 @@ exports.getContact = async (req, res) => {
   }
 };
 
-// Update contact details
 exports.updateContact = async (req, res) => {
   try {
     const newData = req.body;

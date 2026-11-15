@@ -76,7 +76,7 @@ export default function About() {
                   <span className="block text-[10px] text-slate-400 tracking-wider font-semibold uppercase">
                     {t.about.linkedinLabel}
                   </span>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-xs font-medium text-white hover:text-[#C5912B] transition-colors">
+                  <a href="https://www.linkedin.com/in/dt-husin-husin" target="_blank" rel="noopener noreferrer" className="text-xs font-medium text-white hover:text-[#C5912B] transition-colors">
                     {t.about.viewProfile}
                   </a>
                 </div>
